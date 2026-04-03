@@ -181,26 +181,34 @@ const resultGlow = {
 function AvatarPair() {
   return (
     <div className="mb-4 flex items-center justify-center gap-3">
+      
+      {/* LEFT — easy operator */}
       <div className="relative h-[72px] w-[72px] rounded-full bg-white p-1 shadow-[0_14px_40px_rgba(15,23,42,0.10)] ring-1 ring-white/80">
         <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[radial-gradient(circle_at_top,#f4fffd_0%,#dff8f4_45%,#d0efe9_100%)]">
-          <img src={operatorAvatar} alt="easy operator" className="h-full w-full object-cover" />
+          <img
+            src={operatorAvatar}
+            alt="easy operator"
+            className="h-[86%] w-[86%] object-contain"
+          />
         </div>
       </div>
+
+      {/* CENTER — connection */}
       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-300 shadow-[0_10px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/80">
         ↔
       </div>
+
+      {/* RIGHT — member */}
       <div className="relative h-[72px] w-[72px] rounded-full bg-white p-1 shadow-[0_14px_40px_rgba(15,23,42,0.10)] ring-1 ring-white/80">
-        <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[radial-gradient(circle_at_top,#fff8ef_0%,#f4e4cf_52%,#ead5ba_100%)]">
-          <div className="absolute top-[12px] h-3 w-10 rounded-full bg-[#7a4d2c] shadow-[0_4px_10px_rgba(122,77,44,0.25)]" />
-          <div className="absolute top-[18px] h-5 w-7 rounded-t-full bg-[#9c6035]" />
-          <div className="absolute top-[34px] h-8 w-8 rounded-full bg-[#f7dcc2]" />
-          <div className="absolute top-[39px] flex gap-[6px]">
-            <span className="h-[4px] w-[4px] rounded-full bg-[#5c3a22]" />
-            <span className="h-[4px] w-[4px] rounded-full bg-[#5c3a22]" />
-          </div>
-          <div className="absolute top-[49px] h-[2px] w-[10px] rounded-full bg-[#8d6044]" />
+        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[radial-gradient(circle_at_top,#fff8ef_0%,#f4e4cf_52%,#ead5ba_100%)]">
+          <img
+            src="/member.png"
+            alt="member"
+            className="h-[86%] w-[86%] object-contain"
+          />
         </div>
       </div>
+
     </div>
   );
 }
